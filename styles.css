@@ -1,0 +1,106 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('bg2.jpg');
+    background-size: cover;
+}
+
+header {
+    background-color: #235011;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust this value to control the distance from the text */
+    width: 0;
+    height: 2px; /* Adjust this value to control the thickness of the stroke */
+    background-color: #ffd700; /* Stroke color */
+    transition: width 0.3s ease; /* Smooth width transition */
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+.image {
+    width: 100%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.text-container {
+    position: absolute;
+    left: 12%;
+    top: 55%;
+    transform: translateY(-50%);
+    color: white;
+    text-shadow: 2px 4px 4px black;
+}
+
+.text-container h1 {
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.text-container h2 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.explore-button {
+    font-weight: bold;
+    padding: 15px 35px;
+    font-size: 16px;
+    background-color:#5ca84d;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.explore-button:hover {
+    font-weight: bold;
+    background-color:#197036;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    transform: scale(1.05);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.15s, background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+}

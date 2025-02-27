@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Municipality of Kapatagan</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('m.jpg');
+            background-size: cover;
+            background-position: center;
+            padding-top: 60px;
+        }
+
+        header {
+            background-color: #235011;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust this value to control the distance from the text */
+    width: 0;
+    height: 2px; /* Adjust this value to control the thickness of the stroke */
+    background-color: #ffd700; /* Stroke color */
+    transition: width 0.3s ease; /* Smooth width transition */
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+        .image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 0px;
+        }
+        .content {
+            text-align: center;
+            margin-top: 76px;
+        }
+
+        .about-container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 0;
+            border-radius: 12px;
+            display: flex;
+            align-items: flex-start;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            line-height: 1.7;
+            font-size: 16px;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .about-description {
+            flex: 1;
+            text-align: left;
+            border-left: 4px solid #E09B4F;
+            padding:11px 20px;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+            padding-left: 15px;
+        }
+
+        .about-description h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.about-description h1::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 0; /* Initially set width to 0 to hide the underline */
+    height: 2px;
+    background-color: #ffd700;
+    transition: width 0.3s ease; /* Smooth transition for the width */
+}
+
+.about-description h1:hover::after {
+    width: 50%; /* Show the underline on hover */
+}
+        .about-description p {
+            margin-bottom: 15px;
+        }
+
+        .about-image-wrapper {
+            flex-shrink: 0;
+            width: 300px;
+            height: calc(100% - 40px); /* Adjust height with margin */
+            margin: 50px 20px; /* Add top and bottom margins */
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .about-image-wrapper:hover .about-image {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img class="image" src="logo.png" alt="MyLogo">
+            <span class="logo-text">Municipality of Kapatagan</span>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="festivals.html">Festival</a></li>
+                <li><a href="tourist.html">Tourist</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="about-container">
+            <div class="about-description">
+                <h1>About</h1>
+                <p>Kapatagan, officially the Municipality of Kapatagan (Maranao: Inged a Kapatagan; Cebuano: Lungsod sa Kapatagan; Tagalog: Bayan ng Kapatagan), is a 1st class municipality in the province of Lanao del Norte, Philippines. According to the 2020 census, it has a population of 62,571 people.</p>
+                <p>The town is famous for its diverse tourist spots such as big rice fields, majestic mountain views, and crystal clear rivers and lakes. Barangay Taguitic and Lapinig, located near the boundary with the neighboring Zamboanga del Sur province, are also famous for its crab produce.</p>
+                <p>The municipality also boasts its successful sports program in basketball. The town is known in Lanao del Norte and even throughout Region X with a powerhouse basketball team in commercial and youth levels having participated in various semi-pro leagues, commercial tournaments, and youth leagues throughout Mindanao.</p>
+            </div>
+            <div class="about-image-wrapper">
+                <img class="about-image" src="m1.jpg" alt="About Kapatagan">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

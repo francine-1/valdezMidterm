@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kahumayan Festival - Kapatagan</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('rice.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            padding-top: 60px;
+        }
+
+        header {
+            background-color: #235011;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+
+
+        .image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 0px;
+        }
+
+        nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust this value to control the distance from the text */
+    width: 0;
+    height: 2px; /* Adjust this value to control the thickness of the stroke */
+    background-color: #ffd700; /* Stroke color */
+    transition: width 0.3s ease; /* Smooth width transition */
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+  
+        .festival-container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+   
+        .festival-image-wrapper {
+            position: relative;
+            width: 500px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .festival-image-carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .festival-image {
+            width: 100%;
+            height: auto;
+            flex-shrink: 0;
+            display: block;
+        }
+
+        .festival-text {
+            text-align: left;
+            line-height: 1.7;
+            font-size: 16px;
+            color: #333;
+            padding: 20px;
+            border-left: 4px solid #E09B4F;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .festival-text p {
+            margin-bottom: 15px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('.festival-image-carousel');
+            const images = document.querySelectorAll('.festival-image');
+            let index = 0;
+
+            function nextSlide() {
+                index = (index + 1) % images.length;
+                updateCarousel();
+            }
+
+            function updateCarousel() {
+                carousel.style.transform = `translateX(-${index * 100}%)`;
+            }
+
+            setInterval(nextSlide, 3000); // Change slide every 3 seconds
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <img class="image" src="logo.png" alt="MyLogo">
+            <span class="logo-text">Municipality of Kapatagan</span>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="festivals.html">Festival</a></li>
+                <li><a href="tourist.html">Tourist</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="festival-container">
+        <h1>Kahumayan Festival</h1>
+        <div class="festival-image-wrapper">
+            <div class="festival-image-carousel">
+                <img class="festival-image" src="hum.jpg" alt="Kahumayan Festival">
+                <img class="festival-image" src="humay1.jpg" alt="Kahumayan Festival">
+                <img class="festival-image" src="humay2.jpg" alt="Kahumayan Festival">
+                <img class="festival-image" src="humay3.jpg" alt="Kahumayan Festival">
+                <img class="festival-image" src="humay6.jpg" alt="Kahumayan Festival">
+                <img class="festival-image" src="humay7.jpg" alt="Kahumayan Festival">
+            </div>
+        </div>
+        <div class="festival-text">
+            <p>The Kahumayan Festival, a radiant celebration in Kapatagan, Lanao del Norte, is a tribute to the land's generosity and the heart of our community. It's a time when golden fields of "humay" (rice) inspire a symphony of colors, rhythms, and flavors, uniting us in gratitude.</p>
+            <p>Imagine streets alive with dancers, their vibrant costumes telling stories of our heritage. The air buzzes with music, the aroma of local delicacies, and the joyful spirit of togetherness. From dawn till dusk, the festival unfolds, a tapestry of cultural performances, agricultural showcases, and culinary delights.</p>
+            <p>More than just a celebration, Kahumayan is a journey into the soul of Kapatagan. It's an invitation to experience the warmth of our people, the richness of our traditions, and the beauty of our land. Join us, and let the spirit of Kahumayan fill your heart with joy and wonder.</p>
+            <p>Come and experience the Kahumayan Festival, a celebration where the heart of Kapatagan shines its brightest!</p>
+        </div>
+    </div>
+</body>
+</html>

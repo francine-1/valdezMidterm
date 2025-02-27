@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Municipality of Kapatagan</title>
+    <style>
+         body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-size: cover;
+            background-position: center;
+            padding-top: 50px;
+        }
+
+        header {
+            background-color:  #235011;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust this value to control the distance from the text */
+    width: 0;
+    height: 2px; /* Adjust this value to control the thickness of the stroke */
+    background-color: #ffd700; /* Stroke color */
+    transition: width 0.3s ease; /* Smooth width transition */
+}
+
+.nav-links a:hover {
+    color: #2bff00;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+        .contact-container {
+            width: 80%;
+            margin: 80px auto 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .contact-info, .contact-form {
+            width: 45%;
+            margin-bottom: 20px;
+        }
+
+        .contact-info h2, .contact-form h2 {
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            line-height: 1.6;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form label {
+            margin-top: 10px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            background-color: #5ca84d;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .contact-form button:hover {
+            background-color: #197036;
+        }
+
+        .why-visit {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .why-visit h2 {
+            margin-bottom: 15px;
+        }
+
+        .why-visit ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .why-visit li {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+                width: 95%;
+            }
+
+            .contact-info, .contact-form {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img style="width: 50px; height: 50px; border-radius: 50%; margin: 0px;" src="logo.png" alt="MyLogo">
+            <span class="logo-text">Municipality of Kapatagan</span>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="festivals.html">Festival</a></li>
+                <li><a href="tourist.html">Tourist</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>We're here to help! Whether you have questions, feedback, or need assistance planning your visit, please don't hesitate to reach out.</p>
+            <p><strong>Address:</strong> Municipal Hall, Kapatagan, Lanao del Norte, Philippines</p>
+            <p><strong>Phone:</strong> (Provide Phone Number)</p>
+            <p><strong>Email:</strong> (Provide Email Address)</p>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="why-visit">
+        <h2>Why Visit Kapatagan, Lanao del Norte?</h2>
+        <p>Discover the hidden gems and natural wonders that Kapatagan has to offer. Here's why you should plan your visit:</p>
+        <ul>
+            <li><strong>Natural Beauty:</strong> Explore stunning waterfalls like Cathedral Falls and Sta. Cruz Falls, and enjoy the serene La Libertad Lake.</li>
+            <li><strong>Adventure and Recreation:</strong> Experience thrilling activities at Durano Eco Park and enjoy the mountain views at Sieta Paradise.</li>
+            <li><strong>Rich Culture and Festivals:</strong> Immerse yourself in the local culture and participate in vibrant festivals that showcase the town's heritage.</li>
+            <li><strong>Warm Hospitality:</strong> Experience the friendly and welcoming atmosphere of our community.</li>
+            <li><strong>Unforgettable Memories:</strong> Create lasting memories with unique experiences and breathtaking landscapes.</li>
+        </ul>
+        <p><strong>"Your adventure awaits. Contact us today to start planning your unforgettable trip to Kapatagan!"</strong></p>
+        <p><strong>"Have questions? We have answers. Reach out and let us guide you to the wonders of Kapatagan."</strong></p>
+        <p><strong>"Ready to explore? Connect with us and discover the best of Kapatagan, Lanao del Norte."</strong></p>
+    </div>
+</body>
+</html>
